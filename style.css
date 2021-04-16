@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+:root{
+    --bg: #001621;
+    --yellow: #FBD784;
+    --tnr: 'Times New Roman', serif;
+    --ubuntu: 'Ubuntu', sans-serif;
+}
+body , html{
+    scroll-behavior: smooth;
+}
+body{
+    
+    background: url('img/mntn.png') no-repeat;
+    background-color: var(--bg);
+    background-size: contain;
+    color: white;
+    margin: 47px 64px 96px;
+    font-family: var(--ubuntu);
+    scroll-behavior: smooth;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+
+/*******************************************
+****************** HEADER ******************
+*******************************************/
+
+
+
+.header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+.header .logo{
+    font-size: 26px;
+    font-family: var(--tnr);
+}
+
+.header ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+}
+.header ul > li{
+    display: inline;    
+}
+.header ul > li + li{
+    margin-left: 20px;
+}
+.header a i{
+    position: relative;
+    top: 1px;
+    margin-right: 8px;
+}
+
+
+
+
+/********************************************
+****************** WELCOME ******************
+********************************************/
+
+.welcome{
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 160px 0 0 0;
+    margin-bottom: 512px;
+}
+.welcome ul{
+    position: fixed;
+    z-index: 9999;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+}
+.welcome ul li{
+    display: inherit;
+    font-weight: bold;
+    /* padding: 16px 0; */
+}
+
+
+.welcome .soc-net{
+    flex: 1;
+}
+.welcome .soc-net ul{
+    top: 275px;
+    left: 64px;
+}
+
+.welcome .soc-net ul li:first-child{
+    writing-mode: vertical-lr;
+}
+.welcome .soc-net ul li{
+    padding: 10px 0;
+}
+
+.welcome .content{
+    padding: 0 0 0 300px;
+    width: 760px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
+}
+.welcome .content div{
+    display: flex;
+    font-weight: bold;
+}
+.welcome .content div hr{
+    width: 59px;
+    height: 0;
+    border: solid 1px var(--yellow);
+    margin-left: 0;
+    margin-right: 26px;
+    text-align: left;
+}
+.welcome .content span{
+    font-size: 72px;
+    font-family: var(--tnr);
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-bottom: 26px;
+}
+.welcome .content div .span{
+    color: var(--yellow);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 900;
+    font-family: var(--ubuntu);
+    letter-spacing: 4.8px;
+}
+.welcome .content a{
+    font-weight: bold;
+}
+
+
+
+.slider{
+    z-index: 99;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 40px;
+}
+.slider span{
+    margin-right: 20px;
+}
+.slider_link_list {
+    width: 77px;
+    list-style-type: none;
+    flex-direction: column;
+}
+.redirect_link {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 200ms ease-in-out;
+    overflow: hidden;
+}
+.redirect_link::after{
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 60px;
+    background-color: #fff;
+    opacity: 0.5;
+    transition: opacity 200ms ease-in-out;
+}
+.redirect_link.scroll--current::after,
+.redirect_link:hover::after {
+  opacity: 1;
+}
+
+
+/********************************************
+****************** ARTICLE ******************
+********************************************/
+
+.article{
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 120px;
+}
+.article .first{
+    display: flex;
+    justify-content: start;
+    padding: 75px 0 75px 0;
+}
+.article .first > div{
+    position: relative;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 46px;
+}
+.article .first > div > div > div{
+    display: flex;
+    color: var(--yellow);
+    letter-spacing: 4.8px;
+    text-transform: uppercase;
+}
+.article .first div hr{
+    width: 59px;
+    height: 0;
+    border: solid 1px var(--yellow);
+    margin-left: 0;
+    margin-right: 20px;
+    text-align: left;
+}
+.article .first > div > div .span{
+    padding-bottom: 21px;
+}
+.article .first > div .p{
+    position: absolute;
+    z-index: 1;
+    font-size: 192px;
+    opacity: 0.1;
+}
+.article .first > div > div{
+    position: absolute;
+    z-index: 2;
+    left: 120px;
+    top: 100px;
+}
+
+.article .first > div > div > span{
+    font-size: 52px;
+    font-family: var(--tnr);
+}
+
+.article .first > div > div p{
+    font-size: 14px;
+    margin: 21px 0;
+    line-height: 32px;
+}
+.article .first > div > div a{
+    color: var(--yellow);
+}
+.article .first > div > div a i{
+    position: relative;
+    top: 3px;
+}
+.article .first img{
+    padding-left: 46px;
+    width: 436px;
+}
+
+
+
+
+.article .second img{
+    padding: 0 46px 0 0;
+}
+.article .second > div{
+    padding: 0 0 0 46px;
+}
+
+
+
+
+footer{
+    margin: 0 120px ;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+footer .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer .left div{
+    width: 250px;
+}
+footer .left > div > span{
+    font-family: var(--tnr);
+    font-size: 26px;
+    
+}
+footer .left > div p{
+    margin: 20px 0 0 0;
+    font-weight: 500;
+}
+footer .left > span{
+    opacity: 0.5;
+}
+
+
+footer .right{
+    display: flex;
+    justify-content: space-between;
+    width: 436px;
+}
+footer .right span{
+    color: var(--yellow);
+    font-size: 20px;
+    font-weight: 500;
+}
+footer .right div ul{
+    list-style: none;
+    padding: 7px 0 0 0;
+}
+footer .right div ul li{
+    padding: 13px 0 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********* THE END *********/
